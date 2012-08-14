@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: octopress | Kryhear's Blog]]></title>
+  <link href="http://kryhear.github.com/blog/tags/octopress/atom.xml" rel="self"/>
+  <link href="http://kryhear.github.com/"/>
+  <updated>2012-08-14T16:32:18+08:00</updated>
+  <id>http://kryhear.github.com/</id>
+  <author>
+    <name><![CDATA[Kryhear]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[为什么开始这个装B的Blog]]></title>
+    <link href="http://kryhear.github.com/blog/2012/06/07/Why-This-Blog-So-B/"/>
+    <updated>2012-06-07T12:07:00+08:00</updated>
+    <id>http://kryhear.github.com/blog/2012/06/07/Why-This-Blog-So-B</id>
+    <content type="html"><![CDATA[<h3>源起</h3>
+
+<p>最近似乎变得有点清闲，竟然鬼使神差的想找点东西学学，却也不知想学什么。然后觉得无论学什么都好，一要能装装B，二可以打发打发时间，最后是最好真能学点东西，真能记录些心得。</p>
+
+<p>想起牛B的大神们都会弄个B（Blog），记录一些牛B的大经笔记什么的。觉得咱家也可以弄个B来写写日志心得什么的，虽然写的东西不牛，但是B应该还是可以有的。</p>
+
+<!-- more -->
+
+
+<h3>发端</h3>
+
+<p>既是为了装B，自是得自己建站才B一些。可是俺就一个苦逼的iOS程序猿，连什么HTML，CSS，Javascript都不会，更别说高端的Ruby跟Python。想自己写个Blog站，微乎其微呀。</p>
+
+<p>但是俺再井底，也知道一样东西------<a href="http://www.wordpress.org" title="WordPress">WordPress</a>！看看现在满世界的WP，就像通街的iPhone一样，想要装B，就得与众不同，就得另起炉灶。于是打开万能的<a href="http://www.google.com" title="Google">谷歌</a>，一搜之下，居然有一种号称"A blogging framework for hackers."的神器，实乃装B利器，必备良品啊！这便是------<a href="http://octopress.org/" title="Octopress">Octopress</a>!然后是<a href="http://pages.github.com" title="Github Pages">Github</a>，<a href="http://www.heroku.com" title="Heroku">Heroku</a>，甚至新浪的<a href="http://http://sae.sina.com.cn" title="Sina App Engine">SAE</a>都能对其提供免费托管。此外，vim + markdown的写作方式，即简便，又装B!</p>
+
+<p><a href="http://octopress.org/" title="Octopress"><img src="/images/octpress.png" alt="img" /></a></p>
+
+<h3>结语</h3>
+
+<p>通过牺牲两个午休的时间，加上万能谷歌的协助，这装B的Blog诞生了！</p>
+
+<p>一言以蔽之：“Octopress------装B神器，必备之良品也！”</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[hello]]></title>
+    <link href="http://kryhear.github.com/blog/2012/06/01/hello/"/>
+    <updated>2012-06-01T02:52:00+08:00</updated>
+    <id>http://kryhear.github.com/blog/2012/06/01/hello</id>
+    <content type="html"><![CDATA[<h2>Hello, Octopress!</h2>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

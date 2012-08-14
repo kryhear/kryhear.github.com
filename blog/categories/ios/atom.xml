@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | Kryhear's Blog]]></title>
+  <link href="http://kryhear.github.com/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://kryhear.github.com/"/>
+  <updated>2012-08-14T16:32:18+08:00</updated>
+  <id>http://kryhear.github.com/</id>
+  <author>
+    <name><![CDATA[Kryhear]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在越狱iOS设备实现IPA的安装]]></title>
+    <link href="http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/"/>
+    <updated>2012-06-27T15:17:00+08:00</updated>
+    <id>http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program</id>
+    <content type="html"><![CDATA[<p>我想，大多数人将手中的iOS设备（iPhone、iPad、iTouch）jailbreak后，除了进去Cydia安装各种插件后，也会安装诸如同步推、PP助手等第三方市场吧。我也不例外。</p>
+
+<!-- More! -->
+
+
+<p>一直对于第三方市场怎样安装破解的IPA包表示好奇，恰好最近有朋友问起IPA安装的实现，于是想要一探究竟。</p>
+
+<!-- more -->
+
+
+<ul>
+<li><p>鉴于之前打包deb安装包的经验，我觉得系统可能是调用一脚本，通过命令进行安装，类似dpkg命令。</p></li>
+<li><p>通过解压缩软件打开IPA文件，明显发现其其实就是一个压缩包，事实上手动打包IPA时，也是按照一定目录结构压缩成zip，再改后缀名成ipa。鉴于这个事实，有可能是直接压缩到某系统目录（/var/mobile/Applications），当然还要想办法生成一串随机码作为上级目录。</p></li>
+</ul>
+
+
+<p>通过神奇的Google，发现原来iOS中，有一个负责管理IPA(安装、卸载等)的Framework，这便是Mobile Installation，通过IDA Pro可以发现该Framework有如下API：</p>
+
+<p><img src="/images/post/MobileInstallationAPI.png" alt="image" /></p>
+
+<p>其中，_MobileInstallationInstall就是用来安装IPA的。经过测试，模拟器和真机均可成功安装。好了，废话不多说，具体看<a href="https://github.com/kryhear/IPAInstaller">DEMO</a>。</p>
+]]></content>
+  </entry>
+  
+</feed>
