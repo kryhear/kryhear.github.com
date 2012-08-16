@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: IPA | Kryhear's Blog]]></title>
   <link href="http://kryhear.github.com/blog/tags/ipa/atom.xml" rel="self"/>
   <link href="http://kryhear.github.com/"/>
-  <updated>2012-08-16T09:38:10+08:00</updated>
+  <updated>2012-08-16T09:39:12+08:00</updated>
   <id>http://kryhear.github.com/</id>
   <author>
     <name><![CDATA[Kryhear]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[越狱iOS设备利用itms-services协议，实现Safari一键安装IPA]]></title>
-    <link href="http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/"/>
-    <updated>2012-08-14T17:24:00+08:00</updated>
-    <id>http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device</id>
+    <link href="http://kryhear.github.com/blog/2012/07/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/"/>
+    <updated>2012-07-14T17:24:00+08:00</updated>
+    <id>http://kryhear.github.com/blog/2012/07/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device</id>
     <content type="html"><![CDATA[<p>利用MobileInstallation实现IPA程序安装后，最近有网友问起同步推、91等在线一键安装APP的实现，于是这两天抽了时间研究了一下。一开始以为可以通过调用MobileInstallation Framework来安装，仔细想想后，实在不可能通过一网页调用到系统级文件，更别说调用系统私有库里面的方法来安装。最后只好从<a href="http://tui.tongbu.com/jb" title="同步推">同步推</a>等网站入手。</p>
 
 <!-- more -->
