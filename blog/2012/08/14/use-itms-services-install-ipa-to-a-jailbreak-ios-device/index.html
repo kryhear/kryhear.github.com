@@ -1,24 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Kryhear's Blog]]></title>
-  <link href="http://kryhear.github.com/atom.xml" rel="self"/>
-  <link href="http://kryhear.github.com/"/>
-  <updated>2012-08-16T09:38:10+08:00</updated>
-  <id>http://kryhear.github.com/</id>
-  <author>
-    <name><![CDATA[Kryhear]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>越狱iOS设备利用itms-services协议，实现Safari一键安装IPA - Kryhear's Blog</title>
+  <meta name="author" content="Kryhear">
 
   
-  <entry>
-    <title type="html"><![CDATA[越狱iOS设备利用itms-services协议，实现Safari一键安装IPA]]></title>
-    <link href="http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/"/>
-    <updated>2012-08-14T17:24:00+08:00</updated>
-    <id>http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device</id>
-    <content type="html"><![CDATA[<p>利用MobileInstallation实现IPA程序安装后，最近有网友问起同步推、91等在线一键安装APP的实现，于是这两天抽了时间研究了一下。一开始以为可以通过调用MobileInstallation Framework来安装，仔细想想后，实在不可能通过一网页调用到系统级文件，更别说调用系统私有库里面的方法来安装。最后只好从<a href="http://tui.tongbu.com/jb" title="同步推">同步推</a>等网站入手。</p>
+  <meta name="description" content="利用MobileInstallation实现IPA程序安装后，最近有网友问起同步推、91等在线一键安装APP的实现，于是这两天抽了时间研究了一下。一开始以为可以通过调用MobileInstallation Framework来安装，仔细想想后，实在不可能通过一网页调用到系统级文件， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Kryhear's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Kryhear's Blog</a></h1>
+  
+    <h2>A blogging for Ber.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kryhear.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/blog/categories/ios/">iOS</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">越狱iOS设备利用itms-services协议，实现Safari一键安装IPA</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-14T17:24:00+08:00" pubdate data-updated="true">Aug 14<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>利用MobileInstallation实现IPA程序安装后，最近有网友问起同步推、91等在线一键安装APP的实现，于是这两天抽了时间研究了一下。一开始以为可以通过调用MobileInstallation Framework来安装，仔细想想后，实在不可能通过一网页调用到系统级文件，更别说调用系统私有库里面的方法来安装。最后只好从<a href="http://tui.tongbu.com/jb" title="同步推">同步推</a>等网站入手。</p>
 
 <!-- more -->
 
@@ -27,17 +103,17 @@
 
 <ol>
 <li><p>先用iPhone上的Safari打开<a href="http://tui.tongbu.com/jb" title="同步推">同步推</a>，可以看到<code>在线安装</code>的按钮，同时网站也给出了一键安装的条件：<code>安装要求：已越狱，并安装了appsync</code>！如下图示：
-<img class="center" src="http://kryhear.github.com/images/post/TBT_Install.png" title="同步推在线安装 #安装" ></p></li>
+<img class="center" src="/images/post/TBT_Install.png" title="同步推在线安装 #安装" ></p></li>
 <li><p>点击<code>在线安装</code>后，弹出一个UIAlertView，提示</p>
 
 <blockquote><p>&#8220;tui.tongbu.com&#8221;要安装“同步推1.12（需越狱）online”</p></blockquote>
 
-<p>  <img class="center" src="http://kryhear.github.com/images/post/TBT_Tips.png" title="同步推安装 #提示" ></p></li>
+<p>  <img class="center" src="/images/post/TBT_Tips.png" title="同步推安装 #提示" ></p></li>
 <li><p>点击弹出对话框的<code>安装</code>后，系统自动退回桌面，这时可以看到同步推开始下载并自动安装。</p></li>
 </ol>
 
 
-<p><img class="center" src="http://kryhear.github.com/images/post/TBT_Status.jpg" title="同步推安装 #状态" ></p>
+<p><img class="center" src="/images/post/TBT_Status.jpg" title="同步推安装 #状态" ></p>
 
 <p>以上便是同步推在线一键安装的基本操作流程，不难看出，关键代码应该是在点击<code>在线安装</code>后，网站执行了某个方法后弹出安装提示框。查看网页源代码可以看到<code>在线安装</code>这个位置代码如下：</p>
 
@@ -228,74 +304,257 @@
 <li><p>&lt;key>metadata里主要修改<em>bundle-identifier</em>和<em>bundle-version</em>，具体是什么就不用介绍了，但是要注意一定要跟所安装的IPA包内容一致，不然无法安装成功。另外可以修改<em>title</em>和<em>subtitle</em>，定制安装时弹出框的内容。</p></li>
 </ol>
 
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      <hr />
+<p><strong>以上内容纯属学习研究，您可以随意地转载本站的文章，但须注明来源及本站链接，不可以将本站文章商业化使用，或者修改、转换或以本作品为基础进行创作。</strong></p>
+<p><strong>版权所有 © 2012 转载本站文章请注明：转载自<a href="http://kryhear.github.com">Kryhear</a></strong></p>
+
+
   
-  <entry>
-    <title type="html"><![CDATA[越狱iOS设备实现IPA的安装]]></title>
-    <link href="http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/"/>
-    <updated>2012-06-27T15:17:00+08:00</updated>
-    <id>http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program</id>
-    <content type="html"><![CDATA[<p>我想，大多数人将手中的iOS设备（iPhone、iPad、iTouch）jailbreak后，除了进去Cydia安装各种插件后，也会安装诸如同步推、PP助手等第三方市场吧。我也不例外。</p>
 
-<p>一直对于第三方市场怎样安装破解的IPA包表示好奇，恰好最近有朋友问起IPA安装的实现，于是想要一探究竟。</p>
+<span class="byline author vcard">Posted by <span class="fn">Kryhear</span></span>
 
-<!-- more -->
+      
 
 
-<ul>
-<li><p>鉴于之前打包deb安装包的经验，我觉得系统可能是调用一脚本，通过命令进行安装，类似dpkg命令。</p></li>
-<li><p>通过解压缩软件打开IPA文件，明显发现其其实就是一个压缩包，事实上手动打包IPA时，也是按照一定目录结构压缩成zip，再改后缀名成ipa。鉴于这个事实，有可能是直接压缩到某系统目录（/var/mobile/Applications），当然还要想办法生成一串随机码作为上级目录。</p></li>
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-14T17:24:00+08:00" pubdate data-updated="true">Aug 14<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>iOS</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/blog/tags/ipa/'>IPA</a>, <a class='tag' href='/blog/tags/itms-services/'>itms-services</a>, <a class='tag' href='/blog/tags/jailbreak/'>jailbreak</a>
+  
+</span>
+
+
+    </p>
+    
+      <!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+	<a class="bds_qzone"></a>
+	<a class="bds_tsina"></a>
+	<a class="bds_tqq"></a>
+	<a class="bds_renren"></a>
+	<span class="bds_more">更多</span>
+	<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=634946" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+	</script>
+<!-- Baidu Button END -->
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/" title="Previous Post: 越狱iOS设备实现IPA的安装">&laquo; 越狱iOS设备实现IPA的安装</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><!-- //原来disqus评论代码
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+-->
+
+<!-- 友言评论代码 -->
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1598173" async=""></script>
+<!-- UY END --></div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+<h1>Weibo</h1>
+<ul id="tweets">   
 </ul>
+<iframe width="100%" height="90" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=zh_cn&width=0&height=90&fansRow=2&ptype=1&speed=300&skin=2&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=1705750757&verifier=b5d94de5&colors=0082cb,efefef,666666,0082cb,ecfbfd&dpc=1"></iframe>
+<!-- UY END -->
+</section>
 
 
-<p>通过神奇的Google，发现原来iOS中，有一个负责管理IPA(安装、卸载等)的Framework，这便是Mobile Installation，通过IDA Pro可以发现该Framework有如下API：</p>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/">越狱iOS设备利用itms-services协议，实现Safari一键安装IPA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/">越狱iOS设备实现IPA的安装</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/07/Why-This-Blog-So-B/">为什么开始这个装B的Blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/01/hello/">hello</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Categories</h1>
+    <ul id="tag-cloud">
+		<a href='/blog/categories/ios' style='font-size: 160.0%'>iOS(2)</a> </ul>
+</section>
+<section>
+  <h1>Tags</h1>
+  <ul class="cloud">
+    <a style="font-size: 170%" href="/blog/tags/ipa/">IPA</a>
+<a style="font-size: 100%" href="/blog/tags/itms-services/">itms-services</a>
+<a style="font-size: 170%" href="/blog/tags/jailbreak/">jailbreak</a>
+<a style="font-size: 170%" href="/blog/tags/octopress/">octopress</a>
 
-<p><img class="center" src="http://kryhear.github.com/images/post/MobileInstallationAPI.png"></p>
-
-<p>其中，_MobileInstallationInstall就是用来安装IPA的。经过测试，模拟器和真机均可成功安装。好了，废话不多说，具体看<a href="https://github.com/kryhear/IPAInstaller">DEMO</a>。</p>
-]]></content>
-  </entry>
+  </ul>
+</section>
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
   
-  <entry>
-    <title type="html"><![CDATA[为什么开始这个装B的Blog]]></title>
-    <link href="http://kryhear.github.com/blog/2012/06/07/Why-This-Blog-So-B/"/>
-    <updated>2012-06-07T12:07:00+08:00</updated>
-    <id>http://kryhear.github.com/blog/2012/06/07/Why-This-Blog-So-B</id>
-    <content type="html"><![CDATA[<h3>源起</h3>
-
-<p>最近似乎变得有点清闲，竟然鬼使神差的想找点东西学学，却也不知想学什么。然后觉得无论学什么都好，一要能装装B，二可以打发打发时间，最后是最好真能学点东西，真能记录些心得。</p>
-
-<p>想起牛B的大神们都会弄个B（Blog），记录一些牛B的大经笔记什么的。觉得咱家也可以弄个B来写写日志心得什么的，虽然写的东西不牛，但是B应该还是可以有的。</p>
-
-<!-- more -->
-
-
-<h3>发端</h3>
-
-<p>既是为了装B，自是得自己建站才B一些。可是俺就一个苦逼的iOS程序猿，连什么HTML，CSS，Javascript都不会，更别说高端的Ruby跟Python。想自己写个Blog站，微乎其微呀。</p>
-
-<p>但是俺再井底，也知道一样东西&#8212;&#8212;<a href="http://www.wordpress.org" title="WordPress">WordPress</a>！看看现在满世界的WP，就像通街的iPhone一样，想要装B，就得与众不同，就得另起炉灶。于是打开万能的<a href="http://www.google.com" title="Google">谷歌</a>，一搜之下，居然有一种号称&#8221;A blogging framework for hackers.&#8221;的神器，实乃装B利器，必备良品啊！这便是&#8212;&#8212;<a href="http://octopress.org/" title="Octopress">Octopress</a>!然后是<a href="http://pages.github.com" title="Github Pages">Github</a>，<a href="http://www.heroku.com" title="Heroku">Heroku</a>，甚至新浪的<a href="http://http://sae.sina.com.cn" title="Sina App Engine">SAE</a>都能对其提供免费托管。此外，vim + markdown的写作方式，即简便，又装B!</p>
-
-<p><a href="http://octopress.org/" title="Octopress"><img src="http://kryhear.github.com/images/octpress.png" alt="img" /></a></p>
-
-<h3>结语</h3>
-
-<p>通过牺牲两个午休的时间，加上万能谷歌的协助，这装B的Blog诞生了！</p>
-
-<p>一言以蔽之：“Octopress&#8212;&#8212;装B神器，必备之良品也！”</p>
-]]></content>
-  </entry>
+  <a href="https://github.com/kryhear">@kryhear</a> on GitHub
   
-  <entry>
-    <title type="html"><![CDATA[hello]]></title>
-    <link href="http://kryhear.github.com/blog/2012/06/01/hello/"/>
-    <updated>2012-06-01T02:52:00+08:00</updated>
-    <id>http://kryhear.github.com/blog/2012/06/01/hello</id>
-    <content type="html"><![CDATA[<h2>Hello, Octopress!</h2>
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
-<hr />
-]]></content>
-  </entry>
+        github.showRepos({
+            user: 'kryhear',
+            count: 10,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/zhxuqun@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kryhear", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
-</feed>
+    <p>Follow <a href="http://twitter.com/kryhear">@kryhear</a></p>
+  
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Kryhear -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  <!-- 友言评论代码 -->
+<!-- UY BEGIN ->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1598173" async=""></script>
+<!-- UY END -->
+
+<!-- //原来disqus评论代码
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'kryhear';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/';
+        var disqus_url = 'http://kryhear.github.com/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+-->
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

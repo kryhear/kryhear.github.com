@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>越狱iOS设备实现IPA的安装 - Kryhear's Blog</title>
+  <title>Tag: itms-services - Kryhear's Blog</title>
   <meta name="author" content="Kryhear">
 
   
-  <meta name="description" content="我想，大多数人将手中的iOS设备（iPhone、iPad、iTouch）jailbreak后，除了进去Cydia安装各种插件后，也会安装诸如同步推、PP助手等第三方市场吧。我也不例外。 一直对于第三方市场怎样安装破解的IPA包表示好奇，恰好最近有朋友问起IPA安装的实现，于是想要一探究竟。 &hellip;">
+  <meta name="description" content="Tag: itms-services">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program">
+  <link rel="canonical" href="http://kryhear.github.comblog/tags/itms-services">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,141 +65,42 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">越狱iOS设备实现IPA的安装</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-27T15:17:00+08:00" pubdate data-updated="true">Jun 27<span>th</span>, 2012</time>
-        
-         | <a href="#disqus_thread">Comments</a>
-        
-      </p>
+    <h1 class="entry-title">Tag: Itms-services</h1>
     
   </header>
-
-
-<div class="entry-content"><p>我想，大多数人将手中的iOS设备（iPhone、iPad、iTouch）jailbreak后，除了进去Cydia安装各种插件后，也会安装诸如同步推、PP助手等第三方市场吧。我也不例外。</p>
-
-<p>一直对于第三方市场怎样安装破解的IPA包表示好奇，恰好最近有朋友问起IPA安装的实现，于是想要一探究竟。</p>
-
-<!-- more -->
-
-
-<ul>
-<li><p>鉴于之前打包deb安装包的经验，我觉得系统可能是调用一脚本，通过命令进行安装，类似dpkg命令。</p></li>
-<li><p>通过解压缩软件打开IPA文件，明显发现其其实就是一个压缩包，事实上手动打包IPA时，也是按照一定目录结构压缩成zip，再改后缀名成ipa。鉴于这个事实，有可能是直接压缩到某系统目录（/var/mobile/Applications），当然还要想办法生成一串随机码作为上级目录。</p></li>
-</ul>
-
-
-<p>通过神奇的Google，发现原来iOS中，有一个负责管理IPA(安装、卸载等)的Framework，这便是Mobile Installation，通过IDA Pro可以发现该Framework有如下API：</p>
-
-<p><img class="center" src="/images/post/MobileInstallationAPI.png"></p>
-
-<p>其中，_MobileInstallationInstall就是用来安装IPA的。经过测试，模拟器和真机均可成功安装。好了，废话不多说，具体看<a href="https://github.com/kryhear/IPAInstaller">DEMO</a>。</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      <hr />
-<p><strong>以上内容纯属学习研究，您可以随意地转载本站的文章，但须注明来源及本站链接，不可以将本站文章商业化使用，或者修改、转换或以本作品为基础进行创作。</strong></p>
-<p><strong>版权所有 © 2012 转载本站文章请注明：转载自<a href="http://kryhear.github.com">Kryhear</a></strong></p>
-
-
   
-
-<span class="byline author vcard">Posted by <span class="fn">Kryhear</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="tag">
 
 
 
   
+  <h2>2012</h2>
 
-
-<time datetime="2012-06-27T15:17:00+08:00" pubdate data-updated="true">Jun 27<span>th</span>, 2012</time>
-      
-
-<span class="categories">
+<article>
   
-    <a class='category' href='/blog/categories/ios/'>iOS</a>
-  
-</span>
+
+<h1><a href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/">越狱iOS设备利用itms-services协议，实现Safari一键安装IPA</a></h1>
+<time datetime="2012-08-14T17:24:00+08:00" pubdate><span class='month'>Aug</span> <span class='day'>14</span> <span class='year'>2012</span></time>
+
+<footer>
+
+  <span class="categories">posted in <a class='category' href='/blog/categories/ios/'>iOS</a></span>
 
 
-      
+  <span class="tags">tagged with <a class='tag' href='/blog/tags/ipa/'>IPA</a>, <a class='tag' href='/blog/tags/itms-services/'>itms-services</a>, <a class='tag' href='/blog/tags/jailbreak/'>jailbreak</a></span>
 
-<span class="tags">
-  
-    <a class='tag' href='/blog/tags/ipa/'>IPA</a>, <a class='tag' href='/blog/tags/jailbreak/'>jailbreak</a>
-  
-</span>
+</footer>
 
 
-    </p>
-    
-      <!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
-	<a class="bds_qzone"></a>
-	<a class="bds_tsina"></a>
-	<a class="bds_tqq"></a>
-	<a class="bds_renren"></a>
-	<span class="bds_more">更多</span>
-	<a class="shareCount"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=634946" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
-	</script>
-<!-- Baidu Button END -->
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2012/06/07/Why-This-Blog-So-B/" title="Previous Post: 为什么开始这个装B的Blog">&laquo; 为什么开始这个装B的Blog</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/" title="Next Post: 越狱iOS设备利用itms-services协议，实现Safari一键安装IPA">越狱iOS设备利用itms-services协议，实现Safari一键安装IPA &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><!-- //原来disqus评论代码
+</div>
 
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
--->
-
-<!-- 友言评论代码 -->
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1598173" async=""></script>
-<!-- UY END --></div>
-  </section>
+  
+</article>
 
 </div>
 
@@ -336,10 +237,7 @@
       var disqus_shortname = 'kryhear';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/';
-        var disqus_url = 'http://kryhear.github.com/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

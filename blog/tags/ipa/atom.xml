@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: iOS | Kryhear's Blog]]></title>
-  <link href="http://kryhear.github.com/blog/categories/ios/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: IPA | Kryhear's Blog]]></title>
+  <link href="http://kryhear.github.com/blog/tags/ipa/atom.xml" rel="self"/>
   <link href="http://kryhear.github.com/"/>
   <updated>2012-08-16T09:38:10+08:00</updated>
   <id>http://kryhear.github.com/</id>

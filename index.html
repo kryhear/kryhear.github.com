@@ -9,7 +9,7 @@
   <meta name="author" content="Kryhear">
 
   
-  <meta name="description" content="我想，大多数人将手中的iOS设备（iPhone、iPad、iTouch）jailbreak后，除了进去Cydia安装各种插件后，也会安装诸如同步推、PP助手等第三方市场吧。我也不例外。 一直对于第三方市场怎样安装破解的IPA包表示好奇，恰好最近有朋友问起IPA安装的实现，于是想要一探究竟。 ">
+  <meta name="description" content="利用MobileInstallation实现IPA程序安装后，最近有网友问起同步推、91等在线一键安装APP的实现，于是这两天抽了时间研究了一下。一开始以为可以通过调用MobileInstallation Framework来安装，仔细想想后，实在不可能通过一网页调用到系统级文件， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,7 +58,7 @@
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
   <li><a href="/blog/categories/ios/">iOS</a></li>
-  <li><a href="/about">About Me</a></li>
+  <li><a href="/about">About</a></li>
 </ul>
 
 </nav>
@@ -72,7 +72,50 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/">在越狱iOS设备实现IPA的安装</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/">越狱iOS设备利用itms-services协议，实现Safari一键安装IPA</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-14T17:24:00+08:00" pubdate data-updated="true">Aug 14<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>利用MobileInstallation实现IPA程序安装后，最近有网友问起同步推、91等在线一键安装APP的实现，于是这两天抽了时间研究了一下。一开始以为可以通过调用MobileInstallation Framework来安装，仔细想想后，实在不可能通过一网页调用到系统级文件，更别说调用系统私有库里面的方法来安装。最后只好从<a href="http://tui.tongbu.com/jb" title="同步推">同步推</a>等网站入手。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/">阅读全文 &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/">越狱iOS设备实现IPA的安装</a></h1>
     
     
       <p class="meta">
@@ -98,9 +141,6 @@
 
 
   <div class="entry-content"><p>我想，大多数人将手中的iOS设备（iPhone、iPad、iTouch）jailbreak后，除了进去Cydia安装各种插件后，也会安装诸如同步推、PP助手等第三方市场吧。我也不例外。</p>
-
-<!-- More! -->
-
 
 <p>一直对于第三方市场怎样安装破解的IPA包表示好奇，恰好最近有朋友问起IPA安装的实现，于是想要一探究竟。</p>
 
@@ -225,7 +265,11 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/">在越狱iOS设备实现IPA的安装</a>
+        <a href="/blog/2012/08/14/use-itms-services-install-ipa-to-a-jailbreak-ios-device/">越狱iOS设备利用itms-services协议，实现Safari一键安装IPA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/06/27/how-to-install-ipa-with-a-jailbrbreak-ios-device-by-program/">越狱iOS设备实现IPA的安装</a>
       </li>
     
       <li class="post">
@@ -241,12 +285,15 @@
 <section>
   <h1>Categories</h1>
     <ul id="tag-cloud">
-		<a href='/blog/categories/ios' style='font-size: 160.0%'>iOS(1)</a> </ul>
+		<a href='/blog/categories/ios' style='font-size: 160.0%'>iOS(2)</a> </ul>
 </section>
 <section>
   <h1>Tags</h1>
   <ul class="cloud">
-    <a style="font-size: NaN%" href="/blog/tags/octopress/">octopress</a>
+    <a style="font-size: 170%" href="/blog/tags/ipa/">IPA</a>
+<a style="font-size: 100%" href="/blog/tags/itms-services/">itms-services</a>
+<a style="font-size: 170%" href="/blog/tags/jailbreak/">jailbreak</a>
+<a style="font-size: 170%" href="/blog/tags/octopress/">octopress</a>
 
   </ul>
 </section>
@@ -270,7 +317,7 @@
 
         github.showRepos({
             user: 'kryhear',
-            count: 0,
+            count: 10,
             skip_forks: true,
             target: '#gh_repos'
         });
