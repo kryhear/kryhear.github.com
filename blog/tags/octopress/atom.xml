@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: octopress | Kryhear's Blog]]></title>
   <link href="http://kryhear.github.com/blog/tags/octopress/atom.xml" rel="self"/>
   <link href="http://kryhear.github.com/"/>
-  <updated>2012-08-16T09:39:12+08:00</updated>
+  <updated>2012-09-14T17:42:06+08:00</updated>
   <id>http://kryhear.github.com/</id>
   <author>
     <name><![CDATA[Kryhear]]></name>
@@ -49,8 +49,6 @@
     <updated>2012-06-01T02:52:00+08:00</updated>
     <id>http://kryhear.github.com/blog/2012/06/01/hello</id>
     <content type="html"><![CDATA[<h2>Hello, Octopress!</h2>
-
-<hr />
 ]]></content>
   </entry>
   
